@@ -8,12 +8,12 @@ import { SubscriptionService } from './subscription.service';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Subscription]), // Provides SubscriptionRepository
-    UserModule, // Provides UserService (dependency of SubscriptionService)
-    GymModule,  // Provides GymService (dependency of SubscriptionService)
+    TypeOrmModule.forFeature([Subscription]), 
+    UserModule, 
+    GymModule, 
   ],
   providers: [SubscriptionService],
   controllers: [SubscriptionController],
-  exports: [SubscriptionService], // Export SubscriptionService if other modules need it
+  exports: [SubscriptionService], 
 })
 export class SubscriptionModule {}
